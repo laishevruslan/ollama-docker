@@ -2,7 +2,7 @@ services:
   app:
     build: .
     ports:
-      - 8000:8000
+      - 9000:8000
       - 6678:5678
     volumes:
       - .:/code
@@ -45,7 +45,7 @@ services:
       - ENV=dev
       - WEBUI_AUTH=False
       - WEBUI_NAME=valiantlynx AI
-      - WEBUI_URL=http://localhost:9080
+      - WEBUI_URL=http://localhost:8080
       - WEBUI_SECRET_KEY=t0p-s3cr3t
       - NO_PROXY=host.docker.internal 
     extra_hosts:
@@ -58,4 +58,5 @@ networks:
   ollama-docker:
     external: false
   
+
 
